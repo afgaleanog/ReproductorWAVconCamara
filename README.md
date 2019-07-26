@@ -54,7 +54,7 @@ En la figura anterior se puede observar el funcionamiento del procesador, el cua
     La decodifica y los operandos también son entregados al resto del proceso mientras que a la par el PC relativo a las ramas es predicho.
     Se ejecuta la operación decodificada y para operaciones lógicas simples o sumas la ejcución termina y se entrega.
     Para instrucciones más complicadas, se almacena el resultado y una segunda ejecución es realizada para obtener el resutado final.
-    Finalmente los resultados son escritos en el archivo de registros.
+    Finalmente los resultados son escritos en el archivo de registros..
 
 Para el control de interrupciones se designan 3 registros por parte del procesador, esos son el habilitador de interrupciones (IE), la máscara de interrupciones (IM) y la interrupción pendiente (IP). Una vez activada una interrupción, el procesador guarda todos sus registros en la pila, modifica el registro IP y espera hasta que se solucione la interrupción para restaurar el valor de los registros almacenados y retomar el programa inicial. La conexión entre los periféricos y el procesador se hace por medio de un bus wishbone. Sin embargo las interrupciones realizadas por los periféricos son directas con el procesador para que pueda encargarse de ellas inmediatamente.
 
