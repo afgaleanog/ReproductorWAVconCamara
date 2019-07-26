@@ -3,9 +3,9 @@
 Maria Fernanda Triviño, Andrés Felipe Galeano, Cristian Camilo Camargo
 
 En este documento se describirá el funcionamiento y la arquitectura de nuestro proyecto para lectrónica digital II, en la Universidad Nacional de Colombia. El fin del proyecto es implementar un SoC con un procesador LM32 y varios periféricos integrados. Los periféricos siguen una lógica de maestro-esclavos y se unen al procesador LM32 mediante un bus wishbone.
-A continuación se muestra el diagrama de funcionamiento del SoC, donde se usa un procesador LM32, se interconectan los periféricos por medio de un wishbone y se realizan los protocolos de comunicación SPI, UART y GPIO.
+A continuación se muestra el diagrama de funcionamiento del SoC, donde se usa un procesador LM32, se interconectan los periféricos por medio de un wishbone y se realizan los protocolos de comunicación SPI, UART y GPIO.<br />
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/reproductorwav.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/reproductorwav.png)
 
 # Especificaciones:
 
