@@ -5,7 +5,7 @@ Maria Fernanda Triviño, Andrés Felipe Galeano, Cristian Camilo Camargo
 En este documento se describirá el funcionamiento y la arquitectura de nuestro proyecto para lectrónica digital II, en la Universidad Nacional de Colombia. El fin del proyecto es implementar un SoC con un procesador LM32 y varios periféricos integrados. Los periféricos siguen una lógica de maestro-esclavos y se unen al procesador LM32 mediante un bus wishbone.
 A continuación se muestra el diagrama de funcionamiento del SoC, donde se usa un procesador LM32, se interconectan los periféricos por medio de un wishbone y se realizan los protocolos de comunicación SPI, UART y GPIO.
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/reproductorwav.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/reproductorwav.png)
 
 # Especificaciones:
 
@@ -14,11 +14,12 @@ El proyecto tiene las siguientes especificaciones:
 
 
 # Perifericos
-LCD-SPI
 
-GPI
-
-GPO
+• SPI: Para el control de la pantalla y la ranura SD.
+• I2C: Para el control del acelerómetro.
+• GPIO: Para el control de los botones.
+• UART: Para la programación de la tarjeta.
+• TIMER: Para el control del reloj de la tarjeta. 
 
 
 # Documentación
@@ -35,7 +36,7 @@ El modulo tiene 3 protocolos de comunicación: SPI, GPI y UART con los que se en
 
 El mapa de memoria del proyecto se muestra a continuación:
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/mapadememoria.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/mapadememoria.png)
 
 
 MEMORIA FIFO
@@ -44,7 +45,7 @@ Un pixel en raw ocupa 3 Byte->640*3=0X780 bytes
 
 Para los periféricos de comunicación se estudiará el procesador LatticeMico32.
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/lm32.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/lm32.png)
 
 En la figura anterior se puede observar el funcionamiento del procesador, el cual se divide en 6 etapas de funcionamiento.
 
@@ -60,7 +61,7 @@ Para el control de interrupciones se designan 3 registros por parte del procesad
 
 # Bus wishbone
 
-![Alt text] https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/wishbone.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/wishbone.png)
 
 SPI
 
@@ -69,34 +70,34 @@ El periferico SPI implementado es el proporcionado por el profesor y se puede ob
 
 # Módulo interno de la cámara
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/modulocamara.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/modulocamara.png)
 
 # Cámara
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/camara.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/camara.png)
 
 # GPIO
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/gpio.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/gpio.png)
 
 # SPI
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/spi.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/spi.png)
 
 # Timer
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/timer.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/timer.png)
 
 # I2C
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c1.png
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c2.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c1.png)
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c2.png)
 
 
 
 # UART
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/uart.png
+(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/uart.png)
 
 
 
