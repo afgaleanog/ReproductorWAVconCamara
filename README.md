@@ -60,11 +60,11 @@ Para el control de interrupciones se designan 3 registros por parte del procesad
 
 # Bus wishbone
 
-https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/wishbone.png
+![Alt text] https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/wishbone.png
 
 SPI
 
-El periferico SPI implementado es el nos proporcionó el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen. Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura.
+El periferico SPI implementado es el proporcionado por el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen. Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura.
 
 
 # Módulo interno de la cámara
