@@ -11,12 +11,7 @@ https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/repr
 
 El proyecto tiene las siguientes especificaciones:
 
-    Lector de micro SD de hasta 8 GB. Realiza la inicialización y lectura de datos de una memoria SD ver 2.
-    Pantalla LCD de 176 x 220 pixeles. Muestra el juego de Snake.
-    5 botones pulsadores. B1: movimiento a la derecha. B2: movimiento a la izquierda. B3: movimiento arriba. B4: movimiento abajo. B5: Reinicia juego.
-    Procesador LM32 con frecuencia de 100 MHz. Con bus de datos de 32 bits, realizar el procesamiento del juego y controla los distintos periféricos de la consola.
-    Memoria RAM de 17 Kbits ó 2 KB. Almacena la lógica del juego.
-    Alimentación a 5V.
+
 
 # Perifericos
 LCD-SPI
@@ -43,10 +38,11 @@ El mapa de memoria del proyecto se muestra a continuación:
 https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/mapadememoria.png
 
 
+MEMORIA FIFO
+El formato VGA tiene (640)píxeles verticales
+Un pixel en raw ocupa 3 Byte->640*3=0X780 bytes
 
-Para abordar en estos periféricos de comunicación se analizará primero el procesador LatticeMico32.
-LatticeMico32
-
+Para los periféricos de comunicación se estudiará el procesador LatticeMico32.
 
 https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/lm32.png
 
@@ -60,32 +56,50 @@ En la figura anterior se puede observar el funcionamiento del procesador, el cua
     Finalmente los resultados son escritos en el archivo de registros.
 
 Para el control de interrupciones se designan 3 registros por parte del procesador, esos son el habilitador de interrupciones (IE), la máscara de interrupciones (IM) y la interrupción pendiente (IP). Una vez activada una interrupción, el procesador guarda todos sus registros en la pila, modifica el registro IP y espera hasta que se solucione la interrupción para restaurar el valor de los registros almacenados y retomar el programa inicial. La conexión entre los periféricos y el procesador se hace por medio de un bus wishbone. Sin embargo las interrupciones realizadas por los periféricos son directas con el procesador para que pueda encargarse de ellas inmediatamente.
-Bus wishbone
 
-Como se mencionó antes, los periféricos y el procesador se comunican por medio de un bus wishbone. A continuación podemos ver las entradas y salidas que necesita dicho bus para su adecuado funcionamiento.
 
-wishbone
+# Bus wishbone
+
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/wishbone.png
+
 SPI
 
-El periferico SPI implementado es el nos proporcionó el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen. Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura. spiBloq
-LCD
+El periferico SPI implementado es el nos proporcionó el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen. Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura.
 
-Al instanciar la LCD como un módulo SPIMaster se obtuvo el siguiente mapa de memoria:
 
-lcd
-SD
+# Módulo interno de la cámara
 
-Nuestro mapa de memoria quedó configurado de la siguiente manera:
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/modulocamara.png
 
-sd
-GPI
+# Cámara
 
-Para el protocolo GPI se manejó solo un registro donde se almacenaba el estado de los pulsadores y por medio de las interrupciones se gestiona la ejecución de las acciones. De aquí se encontró el siguiente mapa de memoria:
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/camara.png
 
-gpio
-Timer
+# GPIO
 
-Nuestro periferico timer se encuentra ubicado en las siguientes posiciones de memoria: timer
-UART
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/gpio.png
 
-Para conectarnos enviar y recibir información desde la uart se usan los siguientes registros: uart
+# SPI
+
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/spi.png
+
+# Timer
+
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/timer.png
+
+# I2C
+
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c1.png
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c2.png
+
+
+
+# UART
+
+https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/uart.png
+
+
+
+
+
+
