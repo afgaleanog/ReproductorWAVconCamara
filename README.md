@@ -36,7 +36,7 @@ El modulo tiene 3 protocolos de comunicación: SPI, GPI y UART con los que se en
 
 El mapa de memoria del proyecto se muestra a continuación:
 
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/mapadememoria.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/f.png)
 
 
 MEMORIA FIFO
