@@ -36,7 +36,7 @@ El modulo tiene 3 protocolos de comunicación: SPI, GPI y UART con los que se en
 
 El mapa de memoria del proyecto se muestra a continuación:
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/mapadememoria.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/mapadememoria.png)
 
 
 MEMORIA FIFO
@@ -45,7 +45,7 @@ Un pixel en raw ocupa 3 Byte->640*3=0X780 bytes
 
 Para los periféricos de comunicación se estudiará el procesador LatticeMico32.
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/lm32.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/lm32.png)
 
 En la figura anterior se puede observar el funcionamiento del procesador, el cual se divide en 6 etapas de funcionamiento.
 
@@ -61,7 +61,7 @@ Para el control de interrupciones se designan 3 registros por parte del procesad
 
 # Bus wishbone
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/wishbone.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/wishbone.png)
 
 SPI
 
@@ -70,34 +70,34 @@ El periferico SPI implementado es el proporcionado por el profesor y se puede ob
 
 # Módulo interno de la cámara
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/modulocamara.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/modulocamara.png)
 
 # Cámara
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/camara.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/camara.png)
 
 # GPIO
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/gpio.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/gpio.png)
 
 # SPI
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/spi.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/spi.png)
 
 # Timer
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/timer.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/timer.png)
 
 # I2C
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c1.png)
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c2.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c1.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c2.png)
 
 
 
 # UART
 
-(https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/uart.png)
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/uart.png)
 
 
 
