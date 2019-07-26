@@ -68,38 +68,6 @@ SPI
 El periferico SPI implementado es el proporcionado por el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen. Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura.
 
 
-# Módulo interno de la cámara
-
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/modulocamara.png)
-
-# Cámara
-
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/camara.png)
-
-# GPIO
-
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/gpio.png)
-
-# SPI
-
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/spi.png)
-
-# Timer
-
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/timer.png)
-
-# I2C
-
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c1.png)
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/i2c2.png)
-
-
-
-# UART
-
-![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/uart.png)
-
-
 
 
 
