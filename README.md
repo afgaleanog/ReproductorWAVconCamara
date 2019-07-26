@@ -1,4 +1,4 @@
-# ReproductorWAVconCamara
+# SOC I2C Acelerometro 
 
 Maria Fernanda Triviño, Andrés Felipe Galeano, Cristian Camilo Camargo
 
@@ -10,14 +10,18 @@ A continuación se muestra el diagrama de funcionamiento del SoC, donde se usa u
 El proyecto tiene las siguientes especificaciones:
 
 
+![](https://raw.githubusercontent.com/afgaleanog/ReproductorWAVconCamara/master/d.png)
+
+
+
 
 # Perifericos
 
-• SPI: Para el control de la pantalla y la ranura SD.
-• I2C: Para el control del acelerómetro.
-• GPIO: Para el control de los botones.
+
+
 • UART: Para la programación de la tarjeta.
 • TIMER: Para el control del reloj de la tarjeta. 
+• GPIO: Para el control de los botones.
 
 
 # Documentación
@@ -26,9 +30,7 @@ Funcionamiento
 
 El modulo tiene 3 protocolos de comunicación: SPI, GPI y UART con los que se enlazan los periféricos externos al procesador: pantalla LCD, memoria SD y los pulsadores con el control LM32. Por otro lado, se consideran los siguientes módulos como periféricos:
 
-    LCD-SPI
-    SDcard-SPI
-    GPI
+    I2C
     Timer
     UART
 
